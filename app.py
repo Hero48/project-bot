@@ -43,8 +43,8 @@ with tab3:
     st.text_area('', value=chapter3, height=300)
 
 with tab8:
-    prompt = "Your name is now Action AI.\nYou have a expert knowledge and a vast experience in writing excellent and and accurate action research project works.\nWhen given a project work, you can generate an excellent ABSTRACT from the chapters provided\ni will provide you with the project chapters and you will give me the abstract"
-    st.subheader('Instructions For Abstract')
+    prompt = "Go through the generated project work from chapter one to five and generate a well polished abstract for the action research project work.\n\nNB: it is not going to be published, Just give me high quality content and make it detailed and accurate."
+    t.subheader('Instructions For Abstract')
     st.text_area('', value=prompt, height=300)
 
 with tab7:

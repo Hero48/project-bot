@@ -10,17 +10,19 @@ st.markdown(
     <style>
     .stApp {
         background-color: #1A1A1A;
-        color: #00FFFF;
+        color: #28E809;
     }
     .stButton>button {
-        background-color: #00FF9F;
-        color: #1A1A1A;
+        background-color: #28E809;
+        color: #101010;
     }
-     .stRadio > label:first-of-type {
-        color: #00FF9F;
+    .stButton>button:hover {
+
+        color: #fff;
     }
-    .stCheckbox > label:first-of-type {
-        color: #00FF9F;
+    .css-1aumxhk {
+        background-color: #1A1A1A;
+        color: #00FFFF;
     }
     </style>
     """,
@@ -48,16 +50,19 @@ with tab1:
     topic = st.text_input('Topic')
 
     prompt = f"Your name is now Action AI.\nYou have a expert knowledge and a vast experience in writing excellent and and accurate action research project works.\nWhen given a scenario and a project topic, you can produce a very vivid and above standard write up. You take a scenario and topic in the scenario, once you have that information, you can now be asked to give any section or chapter of the action research project work and some guidelines about the requested section or chapter will be given by the user and you will be able to provide a very accurate action research following all the standard conventions and inline citations with references.\nYou job is not to give guidance, but rather you are to provide the best possible version of the requested chapter following the requested chapter guidelines provided by the user.\nHer is your scenario and topic:\nAm in  my final year  at teacher training college and am doing my project work and is going to be based  on a school am doing my internship({school}), am teaching {subject}, here is my topic '{topic}.'\nFor now this is how we interact\nInput:\n[ Requested Chapter ]\n[ Requested Chapter Guidelines ]\nResponse:\n[ A perfectly written chapter that is requested]\n \nNB: it is not going to be published, Just give me high quality content and make it detailed and accurate.\n WAIT FOR MY INSTRUCTIONS"
+    cola, colb = st.columns(2)
+    with cola:
+        if st.button('Submit'):
+            if topic == '':
+                st.error('Please enter a topic')
+            else:
+                st.text_area('Output', value=prompt, height=300)
+    with colb:
 
-    if st.button('Submit'):
-        if topic == '':
-            st.error('Please enter a topic')
-        else:
-            st.text_area('Output', value=prompt, height=300)
-    if st.button('Instructions'):
-        instructions = "CHAPTER ONE\nINTRODUCTION\ni. Background to the Study\nii. Perceived problem\niii. Diagnoses\na. Evidence\nb. Causes\niv. Statement of the Problem\nv. Purpose of the Study\nvi. Objectives of the Study\nvii. Research Questions\nviii. Significance of the Study\nix. Delimitation of the Study\nx. Limitations of the Study\nxi. Definition of Terms/Abbreviation\nxii. Organisation of the Study"
+        if st.button('Instructions'):
+            instructions = "CHAPTER ONE\nINTRODUCTION\ni. Background to the Study\nii. Perceived problem\niii. Diagnoses\na. Evidence\nb. Causes\niv. Statement of the Problem\nv. Purpose of the Study\nvi. Objectives of the Study\nvii. Research Questions\nviii. Significance of the Study\nix. Delimitation of the Study\nx. Limitations of the Study\nxi. Definition of Terms/Abbreviation\nxii. Organisation of the Study"
 
-        st.text_area('Output', value=instructions, height=300)
+            st.text_area('Output', value=instructions, height=300)
 
 with tab2:
     chapter2 = "Now Lets go to the next Chapter:\nThe Guidelines are below;\nREVIEW OF RELATED LITERATURE\nReview relevant literature under sub-headings in-line with the research\nobjectives/questions; (can be about 5 pages in all). I want a high quality content and make it detailed and accurate.\n Provide in line references (if any) using the APA style.\nAlso make it extensive at least 5 pages"

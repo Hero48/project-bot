@@ -8,6 +8,29 @@ client = anthropic.Anthropic(
 )
 
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #1A1A1A;
+        color: #28E809;
+    }
+    .stButton>button {
+        background-color: #28E809;
+        color: #101010;
+    }
+    .stButton>button:hover {
+
+        color: #fff;
+    }
+     
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 st.subheader("Welcome to Heroz Tech Projects Bot")
 st.write("A hustle free way to do your projects works easy, faster and more importantly high quality")
 

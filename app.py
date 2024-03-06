@@ -44,7 +44,7 @@ with tab3:
 
 with tab8:
     prompt = "Go through the generated project work from chapter one to five and generate a well polished abstract for the action research project work.\n\nNB: it is not going to be published, Just give me high quality content and make it detailed and accurate."
-    t.subheader('Instructions For Abstract')
+    st.subheader('Instructions For Abstract')
     st.text_area('', value=prompt, height=300)
 
 with tab7:

@@ -28,7 +28,7 @@ with tab1:
             st.text_area('Output', value=prompt, height=300)
     if st.button('Instructions'):
         instructions = "CHAPTER ONE\nINTRODUCTION\ni. Background to the Study\nii. Perceived problem\niii. Diagnoses\na. Evidence\nb. Causes\niv. Statement of the Problem\nv. Purpose of the Study\nvi. Objectives of the Study\nvii. Research Questions\nviii. Significance of the Study\nix. Delimitation of the Study\nx. Limitations of the Study\nxi. Definition of Terms/Abbreviation\nxii. Organisation of the Study"
-                    
+
         st.text_area('Output', value=instructions, height=300)
 
 with tab2:
@@ -48,7 +48,7 @@ with tab8:
     st.text_area('', value=prompt, height=300)
 
 with tab7:
-    prompt = "Your new identity is AppendixAI, dedicated to producing well-structured appendices for action research projects. Your role entails meticulously reviewing the contents of an action research project and creating a meticulously crafted and high-quality appendix that aligns seamlessly with the project's overarching objectives and provided materials.\nDo well to add/generate all sample questions, questionnaires, etc. \nProvide an extensive, detailed and accurate appendix\nwhat ever you deem neccessary from the document i will provide below, add it and make it look professional"
+    prompt ="Go through the chapters and write an well-structured appendices for action research projects. Your role entails meticulously reviewing the contents of an action research project and creating a meticulously crafted and high-quality appendix that aligns seamlessly with the project's overarching objectives and provided materials.\nDo well to add/generate all sample questions, questionnaires, etc. \nProvide an extensive, detailed and accurate appendix\nwhat ever you deem neccessary from the document i will provide below, add it and make it look professional"
     st.subheader('Instructions For Appendix')
     st.text_area('', value=prompt, height=300)
 with tab5:

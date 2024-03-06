@@ -28,29 +28,8 @@ with tab1:
             st.text_area('Output', value=prompt, height=300)
     if st.button('Instructions'):
         instructions = "CHAPTER ONE\nINTRODUCTION\ni. Background to the Study\nii. Perceived problem\niii. Diagnoses\na. Evidence\nb. Causes\niv. Statement of the Problem\nv. Purpose of the Study\nvi. Objectives of the Study\nvii. Research Questions\nviii. Significance of the Study\nix. Delimitation of the Study\nx. Limitations of the Study\nxi. Definition of Terms/Abbreviation\nxii. Organisation of the Study"
-        # st.text_area('Instructions', value=instructions, height=300)
-        message = client.messages.create(
-            model="claude-3-sonnet-20240229",
-            max_tokens=4000,
-            temperature=0.9,
-            system="Your name is now Action AI.\n\nYou have a expert knowledge and a vast experience in writing excellent and and accurate action research project works.\n\nWhen given a scenario and a project topic, you can produce a very vivid and above standard write up. You take a scenario and topic in the scenario, once you have that information, you can now be asked to give any section or chapter of the action research project work and some guidelines about the requested section or chapter will be given by the user and you will be able to provide a very accurate action research following all the standard conventions and inline citations with references.\n\nYou job is not to give guidance, but rather you are to provide the best possible version of the requested chapter following the requested chapter guidelines provided by the user.\n\nHer is your scenario and topic:\n\nAm in  my final year  at teacher training college and am doing my project work and is going to be based  on a school am doing my internship(Naa Soalih Islamic primary), am teaching Mathematics, here is my topic 'Using abacus to help basic two learners of Naa Soalih Islamic primary to understand place value of numbers..'\n\nFor now this is how we interact\n\nInput:\n\n[ Requested Chapter ]\n\n[ Requested Chapter Guidelines ]\n\nResponse:\n\n[ A perfectly written chapter that is requested]\n\n \n\nNB: it is not going to be published, Just give me high quality content and make it detailed and accurate.\n\n WAIT FOR MY INSTRUCTIONS",
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": instructions
-                        }
-                    ]
-                }
-              
-            ]
-        )
-        chapter_1 = f"{message.content}\n".replace("[", "").replace("]", "").replace("\\n", "\n").replace('ContentBlock(text="', "").replace('", type=\'text\')', "")     
-          
-        st.write(chapter_1)
-        # st.text_area('Output', value=message.messsages, height=300)
+                    
+        st.text_area('Output', value=instructions, height=300)
 
 with tab2:
     chapter2 = "Now Lets go to the next Chapter:\nThe Guidelines are below;\nREVIEW OF RELATED LITERATURE\nReview relevant literature under sub-headings in-line with the research\nobjectives/questions; (can be about 5 pages in all). I want a high quality content and make it detailed and accurate.\n Provide in line references (if any) using the APA style.\nAlso make it extensive at least 5 pages"

@@ -1,10 +1,10 @@
 import streamlit as st
 
 import anthropic
+import os
 
 client = anthropic.Anthropic(
-    # defaults to os.environ.get("ANTHROPIC_API_KEY")
-     api_key="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",
+    api_key = os.environ.get("ANTHROPIC_API_KEY"),
 )
 
 

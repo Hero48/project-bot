@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 st.subheader('Heroz Tech Project Tool')
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(['First Chapter', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Reference', 'Appendix', 'Abstract', 'Acknowledgement', 'Dedication'])
@@ -6,9 +7,10 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(['First Ch
 
 import anthropic
 
+
 client = anthropic.Anthropic(
     # defaults to os.environ.get("ANTHROPIC_API_KEY")
-    api_key="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",
+    api_key=os.environ.get("ANTHROPIC_API_KEY"),
 )
 
 

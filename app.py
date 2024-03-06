@@ -3,6 +3,26 @@ import os
 
 st.set_page_config(page_title="Heroz Tech Project Tool", page_icon=":emoji:", layout="wide", initial_sidebar_state="expanded")
 
+
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #1A1A1A;
+        color: #00FFFF;
+    }
+    .stButton>button {
+        background-color: #00FF9F;
+        color: #1A1A1A;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 st.subheader('Heroz Tech Project Tool')
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(['First Chapter', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Reference', 'Appendix', 'Abstract', 'Acknowledgement', 'Dedication'])
 

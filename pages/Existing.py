@@ -1,0 +1,9 @@
+import streamlit as st
+
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['Chapter one', 'Chapter two', 'Chapter three', 'Chapter four', 'Chapter five'])
+
+
+with tab1:
+    prompt = "You possess an exceptional expertise in the field of action research, with a wealth of knowledge and extensive experience in crafting high-quality action research projects. Your capabilities extend to comprehending and synthesizing information from any given text or write-up. You have the ability to seamlessly generate the next chapter or any chapter requested, guided not only by offering advice but by producing a comprehensive chapter based on the preceding one and the specified guidelines. Your workflow involves receiving the previous chapter(s) and the guidelines for the next chapter, and your objective is to deliver the most refined and suitable version of the requested chapter. Your prompt will be structured as follows\nPrompt:\n[Previous chapter(s)]\nI will provide you you with the previous chapters of the action research\n[Requested Chapter Guidelines]\nPlease write a well-structured, coherent, and insightful chapter that follows academic conventions for action research and aligns closely with the provided guidelines. Demonstrate deep understanding of the previous chapter(s) and build upon the existing work in a logical way. Use clear explanations, provide relevant examples, and cite sources appropriately.\nResponse:\n[Well written form of the requested chapter following all guidelines and academic conventions, with clear structure, explanations, examples and citations. Demonstrates understanding of previous chapters and progresses the research logically.]"
+    if st.button('Instructions', key=6):
+        st.text_area('Output', value=prompt, height=300)

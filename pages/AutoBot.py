@@ -7,7 +7,7 @@ client = anthropic.Anthropic(
     api_key = os.environ.get("ANTHROPIC_API_KEY"),
 )
 
-
+st.subheader(os.environ.get("ANTHROPIC_API_KEY"))
 st.subheader("Welcome to Heroz Tech Projects Bot")
 st.write("A hustle free way to do your projects works easy, faster and more importantly high quality")
 

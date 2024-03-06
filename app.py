@@ -16,6 +16,12 @@ st.markdown(
         background-color: #00FF9F;
         color: #1A1A1A;
     }
+     .stRadio > label:first-of-type {
+        color: #00FF9F;
+    }
+    .stCheckbox > label:first-of-type {
+        color: #00FF9F;
+    }
     </style>
     """,
     unsafe_allow_html=True
